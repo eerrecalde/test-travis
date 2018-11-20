@@ -9,7 +9,7 @@ export default {
   name: 'How It Works',
   methods: {
     mounted() {
-      console.log("test");
+      console.log('test');
     },
   },
 };
