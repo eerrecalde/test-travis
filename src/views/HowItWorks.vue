@@ -7,10 +7,6 @@
 <script>
 export default {
   name: 'How It Works',
-  methods: {
-    mounted() {
-      console.log('test');
-    },
-  },
+  methods: {},
 };
 </script>
