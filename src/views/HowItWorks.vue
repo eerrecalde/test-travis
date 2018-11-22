@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>How it works:</h1>
-    <p>...</p>
+    <p>... 123</p>
   </div>
 </template>
 <script>
