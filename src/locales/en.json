@@ -1,0 +1,50 @@
+{
+  "message": {
+    "header": { "home": { "text": "home" }, "howItWorks": { "text": "how it works" } },
+    "forms": {
+      "fields": {
+        "secret": {
+          "label": "secret",
+          "error": {
+            "required": "secret is required",
+            "maxChars": "secret must be less than 600 characters"
+          }
+        },
+        "email": {
+          "label": "e-mail",
+          "error": {
+            "required": "e-mail is required",
+            "valid": "e-mail must be valid"
+          }
+        },
+        "withToken": {
+          "label": "I want to protect my secret with a token I choose"
+        },
+        "password": {
+          "label": "secret token",
+          "error": {
+            "required": "secret token is required"
+          }
+        },
+        "send": {
+          "text": "send"
+        }
+      }
+    },
+    "components": {
+      "writeSecret": {
+        "title": "write a secret"
+      },
+      "requestSecret": {
+        "title": "request a secret"
+      },
+      "readSecret": {
+        "title": "your secret is"
+      },
+      "readSecretWithPass": {
+        "title": "type received token to discover your secret",
+        "subtitle": "this should have been sent to your email"
+      }
+    }
+  }
+}

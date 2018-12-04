@@ -5,7 +5,7 @@
         <v-card>
           <v-card-title>
             <v-flex align-self-center>
-              <h2>{{ $t('message.components.writeSecret.title') | capitalize}}</h2>
+              <h2>{{ $t('message.components.requestSecret.title') | capitalize }}</h2>
             </v-flex>
           </v-card-title>
           <v-card-text>
@@ -15,13 +15,6 @@
                 :label="$t('message.forms.fields.withToken.label')"
                 required
               ></v-checkbox>
-              <v-text-field
-                v-model="secret"
-                :rules="secretRules"
-                :counter="600"
-                :label="$t('message.forms.fields.secret.label') | capitalize"
-                required
-              ></v-text-field>
               <v-text-field
                 v-model="email"
                 :rules="emailRules"
@@ -55,8 +48,6 @@ export default {
   name: 'sendSecret',
   data: () => ({
     valid: false,
-    secret: '',
-    secretRules: [v => v, v => v],
     email: '',
     show1: false,
     withToken: false,
@@ -64,14 +55,6 @@ export default {
     tokenRules: [v => v, v => v],
   }),
   mounted() {
-    this.secretRules = [
-      v =>
-        !!v ||
-        this.$options.filters.capitalize(this.$t('message.forms.fields.secret.error.required')),
-      v =>
-        v.length <= 600 ||
-        this.$options.filters.capitalize(this.$t('message.forms.fields.secret.error.maxChars')),
-    ];
     this.emailRules = [
       v =>
         !!v ||

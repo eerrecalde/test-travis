@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/how-it-works">How it works</router-link>
-    </div>
-    <router-view/>
+    <v-app>
+      <ex-header></ex-header>
+      <router-view/>
+    </v-app>
   </div>
 </template>
+
+<script>
+import exHeader from '@/components/ExHeader.vue';
+
+export default {
+  components: { exHeader },
+};
+</script>
+
 
 <style lang="scss">
 #app {

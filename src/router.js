@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
+// The other components will be lazy loaded
 
 Vue.use(Router);
 
@@ -28,8 +29,37 @@ const routes = [
     },
   },
   {
+    path: '/read/:hash?',
+    name: 'readSecret',
+    // route level code-splitting
+    // this generates a separate chunk (how-it-works.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "how-it-works" */ './views/Read.vue'),
+    meta: {
+      title: 'Read a secret',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Read a secret you received',
+        },
+        {
+          property: 'og:description',
+          content: 'Read a secret you received',
+        },
+        {
+          name: 'robots',
+          content: 'noindex,nofollow',
+        },
+      ],
+    },
+  },
+  {
     path: '/how-it-works',
-    name: 'how-it-works',
+    name: 'howItWorks',
+    // route level code-splitting
+    // this generates a separate chunk (how-it-works.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "how-it-works" */ './views/HowItWorks.vue'),
     meta: {
       title: 'How it works',
       metaTags: [
@@ -47,10 +77,6 @@ const routes = [
         },
       ],
     },
-    // route level code-splitting
-    // this generates a separate chunk (how-it-works.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "how-it-works" */ './views/HowItWorks.vue'),
   },
 ];
 

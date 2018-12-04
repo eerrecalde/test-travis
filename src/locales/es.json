@@ -1,0 +1,50 @@
+{
+  "message": {
+    "header": { "home": { "text": "Inicio" }, "howItWorks": { "text": "Como funciona" } },
+    "forms": {
+      "fields": {
+        "secret": {
+          "label": "secreto",
+          "error": {
+            "required": "secreto es requerido",
+            "maxChars": "secreto debe ser menos de 600 caracteres"
+          }
+        },
+        "email": {
+          "label": "e-mail",
+          "error": {
+            "required": "e-mail es requerido",
+            "valid": "e-mail debe ser valido"
+          }
+        },
+        "withToken": {
+          "label": "Agregar una palabra clave para extra seguridad"
+        },
+        "password": {
+          "label": "codigo secreto",
+          "error": {
+            "required": "codigo secreto es requerido"
+          }
+        },
+        "send": {
+          "text": "enviar"
+        }
+      }
+    },
+    "components": {
+      "writeSecret": {
+        "title": "escribe un secreto"
+      },
+      "requestSecret": {
+        "title": "envia un pedido de secreto"
+      },
+      "readSecret": {
+        "title": "el secreto es"
+      },
+      "readSecretWithPass": {
+        "title": "escribe el codigo secreto recibido",
+        "subtitle": "este codigo lo envía la persona que requiere un secreto"
+      }
+    }
+  }
+}
